@@ -35,5 +35,3 @@ Feature: Amazon Login
   And I click the continue button
   Then I should get error message says "we cannot find this address"
   And I should still be in the login page
-  
- 

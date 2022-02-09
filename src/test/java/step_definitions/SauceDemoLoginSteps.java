@@ -55,7 +55,7 @@ public void i_should_not_be_logged_in() {
 @Then("Error message should display {string}")
 public void error_message_should_display(String errorMessage) {
 	Assert.assertEquals(page.errorMessage.getText(),errorMessage);
-   Assert.fail();
+  
 }
 
 //Invalid test #ends
