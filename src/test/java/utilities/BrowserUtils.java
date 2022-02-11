@@ -15,7 +15,6 @@ public class BrowserUtils {
 	Select letsSelect;
 	Actions act;
 	
-	
 	// this method returns true when given element is found
 	// returns false when given element is not found
 	public boolean isElementPresent(WebElement element) {
@@ -34,18 +33,22 @@ public class BrowserUtils {
 
 	// gets the text on the alert and returns as a string
 	public String alertGetText() {
+		alert = Driver.getDriver().switchTo().alert();
 		return alert.getText();
 	}
 
 	public void alertAccept() {
+		alert = Driver.getDriver().switchTo().alert();
 		alert.accept();
 	}
 
 	public void alertDismiss() {
+		alert = Driver.getDriver().switchTo().alert();
 		alert.dismiss();
 	}
 
 	public void sendKeysOnAlert(String name) {
+		alert = Driver.getDriver().switchTo().alert();
 		alert.sendKeys(name);
 	}
 
@@ -112,4 +115,6 @@ public class BrowserUtils {
 		element.sendKeys(Keys.chord(Keys.CONTROL), "a");
 		element.sendKeys(Keys.DELETE);
 	}
+	
+	
 }
